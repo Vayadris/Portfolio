@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RC Logic Car | Project Detail</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <style>
+      .detail-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .back-btn {
+        text-decoration: none;
+        color: #007aff;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .full-img {
+        width: 100%;
+        border-radius: 12px;
+        margin: 20px 0;
+        border: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="detail-container">
+      <a href="index.html" class="back-btn">← Back to Portfolio</a>
+      <h1>Logic-Gate Car</h1>
+      <p>
+        <strong>Technical Overview:</strong> Motor Control | Circuit Design |
+        Hardware Debugging
+      </p>
+
+      <video width="100%" height="auto" controls class="full-img">
+        <source src="images/RC_car_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Project Description</h3>
+      <p>
+        This vehicle was built to understand more about hardware parts I learned
+        in ELEX 2120. The goal was to utilize hard-wired logic to create
+        movement and different frequencies.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>
+          <strong>Control System:</strong> Implemented a grayhill SPDT switch to
+          control the car.
+        </li>
+        <li>
+          <strong>Logic Integration:</strong> Used logic gates to trigger sound
+          effects based on specific sensor inputs.
+        </li>
+        <li>
+          <strong>Power Management:</strong> Integrated an L293D H-bridge to
+          handle bidirectional motor control efficiently.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

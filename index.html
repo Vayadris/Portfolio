@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Hangxu Sha</h1>
+        <p>Electrical and Computing Engineering Student</p>
+        <p id="resume"></p>
+        <button onclick="showResume()" id="resumeBtn">View Resume</button>
+        <script>
+          let isShowing = false;
+
+          function showResume() {
+            if (isShowing) {
+              document.getElementById("resume").innerHTML = "";
+              document.getElementById("resumeBtn").innerHTML = "View Resume";
+              isShowing = false;
+            } else {
+              document.getElementById("resume").innerHTML =
+                '<a href="images/Hangxu_Sha_Resume.pdf" target="_blank" class="resume-link">Click Here for my Resume</a>';
+              document.getElementById("resumeBtn").innerHTML = "Hide Resume";
+              isShowing = true;
+            }
+          }
+        </script>
+        <div class="scroll-indicator"><span></span></div>
+      </div>
+    </header>
+
+    <main class="project-container">
+      <a
+        href="logic-RC-car.html"
+        class="project-card"
+        target="_self"
+        title="Click to view project details"
+      >
+        <img
+          src="images/logicRC_Car.png"
+          alt="Project One: logic gate car"
+          class="project-image"
+          title="The car that I built"
+        />
+        <div class="project-text">
+          <h3>Logic-Gate Car</h3>
+          <p>
+            Engineered a car with a IC as a motor driver (L293D) and sound
+            effects using 555 timers and logic gates.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="power-supply.html"
+        class="project-card"
+        target="_self"
+        title="Click to view project details"
+      >
+        <img
+          src="images/power_supply_outside.png"
+          alt="Project Two: AC to DC Power Supply"
+          class="project-image"
+          title="The completed power supply product"
+        />
+        <div class="project-text">
+          <h3>AC to DC Power Supply</h3>
+          <p>
+            Designed and assembled a functional power supply using KiCad.
+            Managed schematic design and component soldering.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="java-game.html"
+        class="project-card"
+        target="_self"
+        title="Click to view project details"
+      >
+        <img
+          src="images/JavaGame.png"
+          alt="Project Three: Java Platformer Game"
+          class="project-image"
+          title="The Java platformer game I developed"
+        />
+        <div class="project-text">
+          <h3>Java Platformer Game</h3>
+          <p>
+            Built a fully functional platformer game using Java with basic
+            animations and audio.
+          </p>
+        </div>
+      </a>
+    </main>
+
+    <br />
+    <br />
+
+    <section class="contact-section">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/xnjwjenq"
+        method="post"
+      >
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          required
+        />
+        <br />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="JohnDoe@mail.com"
+          required
+        />
+        <br />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Anything you would like to talk about!!"
+          required
+        ></textarea>
+        <br />
+
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="reason" value="job" /> Potential Job
+            Offer</label
+          >
+          <label
+            ><input type="radio" name="reason" value="collab" />
+            Collaboration</label
+          >
+          <label
+            ><input type="radio" name="reason" value="networking" />
+            Networking</label
+          >
+        </div>
+        <div class="button-group">
+          <input type="reset" />
+          <input type="submit" />
+        </div>
+      </form>
+
+      <p
+        id="thankYou"
+        style="
+          display: none;
+          color: #38bdf8;
+          text-align: center;
+          margin-top: 15px;
+        "
+      >
+        Thanks for reaching out! I'll get back to you soon.
+      </p>
+
+      <script>
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            fetch(this.action, { method: "POST", body: new FormData(this) });
+            this.reset();
+            document.getElementById("thankYou").style.display = "block";
+            setTimeout(function () {
+              document.getElementById("thankYou").style.display = "none";
+            }, 30000);
+          });
+      </script>
+    </section>
+
+    <footer>
+      <small>Author: <span>Hangxu(Levi) Sha</span> </small><br />
+      <small>&copy; copyright reserved 2026 </small><br />
+    </footer>
+
+    <!--arrow fades when it reaches the bottom of the page, -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const downArrow = document.querySelector(".scroll-indicator");
+        const upArrow = document.querySelector(".scroll-top");
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.documentElement.scrollHeight;
+
+        if (scrollTop + windowHeight >= fullHeight - 50) {
+          downArrow.style.opacity = "0";
+          upArrow.style.opacity = "1";
+        } else {
+          downArrow.style.opacity = "1";
+          upArrow.style.opacity = "0";
+        }
+      });
+    </script>
+
+    <div
+      class="scroll-top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <span></span>
+    </div>
+  </body>
+</html>

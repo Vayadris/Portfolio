@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Detail | RFID Door Lock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <style>
+      .detail-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .back-btn {
+        text-decoration: none;
+        color: #007aff;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .full-img {
+        width: 100%;
+        border-radius: 12px;
+        margin: 20px 0;
+        border: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="detail-container">
+      <a href="index.html" class="back-btn">← Back to Portfolio</a>
+
+      <h1>RFID Door Lock Project</h1>
+      <p><strong>Technical Overview:</strong> ESP-32 | C++ | PlatformIO</p>
+
+      <video width="100%" height="auto" controls class="full-img">
+        <source src="images/rfid_door.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Project Description</h3>
+      <p>
+        This project involved building a fully functional RFID-based door lock
+        system, from wiring the hardware components to programming the access
+        control logic on an ESP-32.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>
+          <strong>RFID Reader:</strong> Integrated an RC522 RFID module to read
+          and authenticate authorized tags and cards.
+        </li>
+        <li>
+          <strong>Access Control:</strong> Programmed logic in C++ to grant or
+          deny access based on stored authorized tag IDs.
+        </li>
+        <li>
+          <strong>Locking Mechanism:</strong> Wired a servo motor to operate as the locking mechanism, which engages or disengages based on access permissions.
+        </li>
+        <li>
+          <strong>Feedback System:</strong> Added LED and buzzer feedback to
+          indicate whether access was granted or denied.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

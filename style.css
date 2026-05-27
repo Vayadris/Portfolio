@@ -43,6 +43,46 @@ body {
   max-width: 600px;
 }
 
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  background: transparent;
+  color: #94a3b8;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-family: "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.filter-btn.active {
+  background: transparent;
+  color: #38bdf8;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.sort-note {
+  font-size: 0.85rem !important;
+  color: #475569 !important;
+  margin-top: 12px !important;
+  letter-spacing: 0.5px;
+}
+
 .project-container {
   max-width: 900px;
   margin: 0 auto 100px auto;
@@ -107,10 +147,18 @@ body {
 
 .back-btn {
   display: inline-block;
-  color: #38bdf8;
+  color: hsl(198, 93%, 60%);
   text-decoration: none;
   font-weight: 600;
   margin-bottom: 25px;
+}
+
+.back-btn:hover {
+  color: hsl(198, 93%, 80%);
+  transform: translateY(-2px);
+
+   text-shadow: 0 0 5px rgba(56, 189, 248, 0.6), 
+               0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .full-img {
@@ -137,6 +185,9 @@ strong {
   }
   .hero-content h1 {
     font-size: 2.5rem;
+  }
+  .filter-buttons {
+    flex-wrap: wrap;
   }
 }
 
@@ -330,41 +381,95 @@ footer span {
     opacity: 0.8;
   }
 }
+
 .scroll-indicator {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-    transition: opacity 0.5s ease;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.5s ease;
 }
+
 .scroll-indicator span {
-    width: 20px;
-    height: 20px;
-   border-bottom: 4px solid #facc15;
-border-right: 4px solid #facc15;
-filter: drop-shadow(0 0 10px #facc15) drop-shadow(0 0 20px #facc15);
-    animation: bounce 2s infinite;
-    cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid #facc15;
+  border-right: 4px solid #facc15;
+  filter: drop-shadow(0 0 10px #facc15) drop-shadow(0 0 20px #facc15);
+  animation: bounce 2s infinite;
+  cursor: pointer;
 }
+
 .scroll-top {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%) rotate(225deg);
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    cursor: pointer;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(225deg);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
 }
 
 .scroll-top span {
-    width: 20px;
-    height: 20px;
-    border-bottom: 3px solid #facc15;
-    border-right: 3px solid #facc15;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #facc15;
+  border-right: 3px solid #facc15;
+}
+
+.filter-buttons-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 10px; /* Space between buttons and your timeline text */
+}
+
+/* Rest of your existing filter-btn styles remain identical */
+.filter-btn {
+  padding: 10px 24px;
+  background: transparent;
+  color: #94a3b8;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-family: "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.filter-btn.active {
+  background: transparent;
+  color: #38bdf8;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.sort-note {
+  font-size: 0.85rem !important;
+  color: #38bdf8 !important; /* Changes the text color to your neon blue */
+  margin: 0 !important;
+  letter-spacing: 0.5px;
+  
+  /* Adds the neon glow effect using layers of blur */
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.6), 
+               0 0 15px rgba(56, 189, 248, 0.3);
 }

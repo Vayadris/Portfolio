@@ -191,7 +191,7 @@ strong {
   }
 }
 
-#resumeBtn {
+#resumeBtn, #githubBtn {
   margin-top: 20px;
   padding: 12px 28px;
   background: transparent;
@@ -206,7 +206,7 @@ strong {
   box-shadow: 0 0 10px rgba(244, 114, 182, 0.2);
 }
 
-#resumeBtn:hover {
+#resumeBtn:hover, #githubBtn:hover {
   background: #38bdf8;
   color: #0f172a;
   transform: translateY(-3px);

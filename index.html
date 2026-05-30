@@ -11,24 +11,43 @@
       <div class="hero-content">
         <h1>Hi, I'm Hangxu Sha</h1>
         <p>Electrical and Computing Engineering Student</p>
+        <!-- Replace your existing button and resume paragraph with this -->
         <p id="resume"></p>
-        <button onclick="showResume()" id="resumeBtn">View Resume</button>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+  <button onclick="showResume()" id="resumeBtn">View Resume</button>
+  <button onclick="showGithub()" id="githubBtn">View GitHub</button>
+</div>
+<p id="github"></p>
         <script>
-          let isShowing = false;
+  let isShowingResume = false;
+  let isShowingGithub = false;
 
-          function showResume() {
-            if (isShowing) {
-              document.getElementById("resume").innerHTML = "";
-              document.getElementById("resumeBtn").innerHTML = "View Resume";
-              isShowing = false;
-            } else {
-              document.getElementById("resume").innerHTML =
-                '<a href="images/Hangxu_Sha_Resume.pdf" target="_blank" class="resume-link">Click Here for my Resume</a>';
-              document.getElementById("resumeBtn").innerHTML = "Hide Resume";
-              isShowing = true;
-            }
-          }
-        </script>
+  function showResume() {
+    if (isShowingResume) {
+      document.getElementById("resume").innerHTML = "";
+      document.getElementById("resumeBtn").innerHTML = "View Resume";
+      isShowingResume = false;
+    } else {
+      document.getElementById("resume").innerHTML =
+        '<a href="images/Hangxu_Sha_Resume.pdf" target="_blank" class="resume-link">Click Here for my Resume</a>';
+      document.getElementById("resumeBtn").innerHTML = "Hide Resume";
+      isShowingResume = true;
+    }
+  }
+
+  function showGithub() {
+    if (isShowingGithub) {
+      document.getElementById("github").innerHTML = "";
+      document.getElementById("githubBtn").innerHTML = "View GitHub";
+      isShowingGithub = false;
+    } else {
+      document.getElementById("github").innerHTML =
+        '<a href="https://github.com/Vayadris" target="_blank" class="resume-link">Click Here for my GitHub</a>';
+      document.getElementById("githubBtn").innerHTML = "Hide GitHub";
+      isShowingGithub = true;
+    }
+  }
+</script>
         <div class="scroll-indicator"><span></span></div>
       </div>
     </header>

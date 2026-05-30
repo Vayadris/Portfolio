@@ -191,7 +191,7 @@ strong {
   }
 }
 
-#resumeBtn, #githubBtn {
+#resumeBtn {
   margin-top: 20px;
   padding: 12px 28px;
   background: transparent;
@@ -205,8 +205,29 @@ strong {
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(244, 114, 182, 0.2);
 }
+#githubBtn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: transparent;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  border-radius: 12px;
+  font-family: "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.2);
+}
 
-#resumeBtn:hover, #githubBtn:hover {
+#resumeBtn:hover{
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.3);
+}
+
+#githubBtn:hover{
   background: #38bdf8;
   color: #0f172a;
   transform: translateY(-3px);

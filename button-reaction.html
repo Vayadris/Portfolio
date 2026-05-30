@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Detail | Button Reaction Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <div class="detail-container">
+      <a href="index.html" class="back-btn">← Back to Portfolio</a>
+
+      <h1>Button Reaction Timer</h1>
+      <p><strong>Technical Overview:</strong> ESP-32 | C++ | PlatformIO | IIC OLED Display</p>
+
+      <video width="100%" height="auto" controls class="full-img">
+        <source src="images/button-reaction.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Project Description</h3>
+      <p>
+        A hardware-based reaction time tester built around an ESP-32 microcontroller. The system
+        randomly lights up one of four LEDs and measures how quickly the player presses the
+        corresponding button, displaying the elapsed reaction time on an OLED screen in real time.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>
+          <strong>Random LED Prompts:</strong> One of four LEDs is randomly activated to test the player's reaction.
+        </li>
+        <li>
+          <strong>Reaction Timing:</strong> The ESP-32 measures the time between the LED
+          lighting up and the correct button being pressed.
+        </li>
+        <li>
+          <strong>OLED Feedback:</strong> An IIC OLED display shows the reaction time result
+          immediately after each round so the player can track their performance.
+        </li>
+        <li>
+          <strong>Button & LED Mapping:</strong> Each of the four buttons corresponds to one LED,
+          requiring the player to match the correct input to the lit output.
+        </li>
+        <li>
+          <strong>Embedded C++ Logic:</strong> Programmed in C++ using PlatformIO,
+          handling GPIO input/output, timing, and display rendering on a single microcontroller.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

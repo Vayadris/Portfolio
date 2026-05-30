@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=2" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
@@ -13,71 +13,84 @@
         <p>Electrical and Computing Engineering Student</p>
         <!-- Replace your existing button and resume paragraph with this -->
         <p id="resume"></p>
-        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-  <button onclick="showResume()" id="resumeBtn">View Resume</button>
-  <button onclick="showGithub()" id="githubBtn">View GitHub</button>
-</div>
-<p id="github"></p>
+        <div
+          style="
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <button onclick="showResume()" id="resumeBtn">View Resume</button>
+          <button onclick="showGithub()" id="githubBtn">View GitHub</button>
+        </div>
+        <p id="github"></p>
         <script>
-  let isShowingResume = false;
-  let isShowingGithub = false;
+          let isShowingResume = false;
+          let isShowingGithub = false;
 
-  function showResume() {
-    if (isShowingResume) {
-      document.getElementById("resume").innerHTML = "";
-      document.getElementById("resumeBtn").innerHTML = "View Resume";
-      isShowingResume = false;
-    } else {
-      document.getElementById("resume").innerHTML =
-        '<a href="images/Hangxu_Sha_Resume.pdf" target="_blank" class="resume-link">Click Here for my Resume</a>';
-      document.getElementById("resumeBtn").innerHTML = "Hide Resume";
-      isShowingResume = true;
-    }
-  }
+          function showResume() {
+            if (isShowingResume) {
+              document.getElementById("resume").innerHTML = "";
+              document.getElementById("resumeBtn").innerHTML = "View Resume";
+              isShowingResume = false;
+            } else {
+              document.getElementById("resume").innerHTML =
+                '<a href="images/Hangxu_Sha_Resume.pdf" target="_blank" class="resume-link">Click Here for my Resume</a>';
+              document.getElementById("resumeBtn").innerHTML = "Hide Resume";
+              isShowingResume = true;
+            }
+          }
 
-  function showGithub() {
-    if (isShowingGithub) {
-      document.getElementById("github").innerHTML = "";
-      document.getElementById("githubBtn").innerHTML = "View GitHub";
-      isShowingGithub = false;
-    } else {
-      document.getElementById("github").innerHTML =
-        '<a href="https://github.com/Vayadris" target="_blank" class="resume-link">Click Here for my GitHub</a>';
-      document.getElementById("githubBtn").innerHTML = "Hide GitHub";
-      isShowingGithub = true;
-    }
-  }
-</script>
+          function showGithub() {
+            if (isShowingGithub) {
+              document.getElementById("github").innerHTML = "";
+              document.getElementById("githubBtn").innerHTML = "View GitHub";
+              isShowingGithub = false;
+            } else {
+              document.getElementById("github").innerHTML =
+                '<a href="https://github.com/Vayadris" target="_blank" class="resume-link">Click Here for my GitHub</a>';
+              document.getElementById("githubBtn").innerHTML = "Hide GitHub";
+              isShowingGithub = true;
+            }
+          }
+        </script>
         <div class="scroll-indicator"><span></span></div>
       </div>
     </header>
-<div class="filter-buttons-container">
-  <div class="filter-buttons">
-    <button class="filter-btn active" onclick="filter('all', this)">All</button>
-    <button class="filter-btn" onclick="filter('school', this)">School</button>
-    <button class="filter-btn" onclick="filter('personal', this)">Personal</button>
-  </div>
-  <p class="sort-note">Projects ordered from most recent to oldest</p>
-</div>
+    <div class="filter-buttons-container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filter('all', this)">
+          All
+        </button>
+        <button class="filter-btn" onclick="filter('school', this)">
+          School
+        </button>
+        <button class="filter-btn" onclick="filter('personal', this)">
+          Personal
+        </button>
+      </div>
+      <p class="sort-note">Projects ordered from most recent to oldest</p>
+    </div>
 
-<script>
-  function filter(category, element) {
-    // 1. Handle filtering logic
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach(card => {
-      if (category === 'all' || card.dataset.category === category) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
+    <script>
+      function filter(category, element) {
+        // 1. Handle filtering logic
+        const cards = document.querySelectorAll(".project-card");
+        cards.forEach((card) => {
+          if (category === "all" || card.dataset.category === category) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // 2. Handle visual button active states
+        const buttons = document.querySelectorAll(".filter-btn");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        element.classList.add("active");
       }
-    });
-
-    // 2. Handle visual button active states
-    const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-  }
-</script>
+    </script>
 
     <main class="project-container">
       <a
@@ -87,21 +100,21 @@
         title="Click to view project details"
         data-category="personal"
       >
-  <img
-    src="images/rfid_door.png"
-    alt="Project: RFID Door Lock"
-    class="project-image"
-    title="The RFID door lock I built"
-  />
-  <div class="project-text">
-    <h3>RFID Door Lock</h3>
-    <p>
-      Built an RFID-based door lock system that grants access using
-      authorized tags, programmed with an ESP-32 and wired to an
-      electronic servo motor.
-    </p>
-  </div>
-</a>
+        <img
+          src="images/rfid_door.png"
+          alt="Project: RFID Door Lock"
+          class="project-image"
+          title="The RFID door lock I built"
+        />
+        <div class="project-text">
+          <h3>RFID Door Lock</h3>
+          <p>
+            Built an RFID-based door lock system that grants access using
+            authorized tags, programmed with an ESP-32 and wired to an
+            electronic servo motor.
+          </p>
+        </div>
+      </a>
 
       <a
         href="logic-RC-car.html"
@@ -124,7 +137,6 @@
           </p>
         </div>
       </a>
-
 
       <a
         href="power-supply.html"

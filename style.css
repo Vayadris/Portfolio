@@ -29,7 +29,9 @@ body {
 
 .hero-content h1 {
   font-size: 3.5rem;
-  text-shadow: 3px 3px 7px rgb(108, 43, 230), -3px -3px 7px hsl(295, 91%, 48%);
+  text-shadow:
+    3px 3px 7px rgb(108, 43, 230),
+    -3px -3px 7px hsl(295, 91%, 48%);
   margin: 0;
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -142,7 +144,9 @@ body {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(244, 114, 182, 0.15), 0 0 30px rgba(167, 139, 250, 0.1);
+  box-shadow:
+    0 0 15px rgba(244, 114, 182, 0.15),
+    0 0 30px rgba(167, 139, 250, 0.1);
 }
 
 .back-btn {
@@ -157,8 +161,9 @@ body {
   color: hsl(198, 93%, 80%);
   transform: translateY(-2px);
 
-   text-shadow: 0 0 5px rgba(56, 189, 248, 0.6), 
-               0 0 15px rgba(56, 189, 248, 0.3);
+  text-shadow:
+    0 0 5px rgba(56, 189, 248, 0.6),
+    0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .full-img {
@@ -220,14 +225,14 @@ strong {
   box-shadow: 0 0 10px rgba(167, 139, 250, 0.2);
 }
 
-#resumeBtn:hover{
+#resumeBtn:hover {
   background: #38bdf8;
   color: #0f172a;
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(167, 139, 250, 0.3);
 }
 
-#githubBtn:hover{
+#githubBtn:hover {
   background: #38bdf8;
   color: #0f172a;
   transform: translateY(-3px);
@@ -260,7 +265,9 @@ strong {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(244, 114, 182, 0.15), 0 0 30px rgba(167, 139, 250, 0.1);
+  box-shadow:
+    0 0 15px rgba(244, 114, 182, 0.15),
+    0 0 30px rgba(167, 139, 250, 0.1);
 }
 
 .contact-section form {
@@ -389,7 +396,11 @@ footer span {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) rotate(45deg);
     opacity: 0.3;
   }
@@ -489,8 +500,9 @@ footer span {
   color: #38bdf8 !important; /* Changes the text color to your neon blue */
   margin: 0 !important;
   letter-spacing: 0.5px;
-  
+
   /* Adds the neon glow effect using layers of blur */
-  text-shadow: 0 0 5px rgba(56, 189, 248, 0.6), 
-               0 0 15px rgba(56, 189, 248, 0.3);
+  text-shadow:
+    0 0 5px rgba(56, 189, 248, 0.6),
+    0 0 15px rgba(56, 189, 248, 0.3);
 }

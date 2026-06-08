@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Space Invaders | Project Detail</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <style>
+      .detail-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .back-btn {
+        text-decoration: none;
+        color: #007aff;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .full-img {
+        width: 100%;
+        border-radius: 12px;
+        margin: 20px 0;
+        border: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="detail-container">
+      <a href="index.html" class="back-btn">← Back to Portfolio</a>
+      <h1>Space Invaders</h1>
+      <p>
+        <strong>Technical Overview:</strong> Python | Pygame | Arduino | Serial
+        Communication
+      </p>
+
+      <video width="100%" height="auto" controls class="full-img">
+        <source src="images/space_invaders.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Project Description</h3>
+      <p>
+        A fully playable Space Invaders game built in Python using Pygame,
+        controlled by a custom Arduino-based joystick controller. The game
+        communicates with the hardware in real time over serial, translating
+        physical joystick input and button presses into in-game actions.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>
+          <strong>Hardware Controller:</strong> Built a custom joystick
+          controller with an Arduino, sending real-time X/Y axis data and
+          button inputs over serial at 115200 baud.
+        </li>
+        <li>
+          <strong>Multiple Abilities:</strong> Implemented three combat
+          abilities — a standard shoot, a screen-wide laser, and a temporary
+          shield — each with individual cooldown timers.
+        </li>
+        <li>
+          <strong>Progressive Difficulty:</strong> Enemies increase in speed
+          and quantity each level, with alternating movement directions and
+          random bullet fire.
+        </li>
+        <li>
+          <strong>Persistent High Score:</strong> The best score is saved to
+          a local file and displayed on the HUD across sessions.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
